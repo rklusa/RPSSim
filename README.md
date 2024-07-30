@@ -6,3 +6,5 @@
 * 1. Move away from the closest threat to ensure entities prioritize their saftey and avoid immediate threats.
   2. If a Threat is not in range for fleeing, Entities will prioritize attacking their closest target within their detection range.
   3. When no threats or tagets are found or are within range entities will wander randomly until a target or threat is found within range.
+
+![demo](https://github.com/rklusa/RPSSim/blob/main/rpsdemo.png)
