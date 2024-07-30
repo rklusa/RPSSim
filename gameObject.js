@@ -10,8 +10,6 @@ class GameObject {
         this.speed = 2;
         this.angle = 0;
         this.t = t;
-        this.status = "empty";
-        
     }
 
     draw(ctx) {
