@@ -2,17 +2,35 @@
     import { GameObject } from "./gameObject.js";
     
     // paper(t=1) => rock(t=2) => scissors(t=3) =>
-    
+
+    const startButton = document.getElementById("startButton");
+    //document.getElementById("startButton").onclick = startGame();
+    const slider = document.getElementById("slider");
+    let getSliderVal = slider.value;
+
     const canvas = document.getElementById("mainCanvas");
     const ctx = canvas.getContext("2d");
-    const deltaT = 30;
+    const deltaT = 100;
     const numOfPlayers = 30;
     const entities = [];
     const detectionR = 100;
     const conversionR = 30;
 
+    let running = false;
+
+    slider.oninput = function() {
+        sliderVal.innerHTML = this.value;
+    }
+
+    function startGame() {
+        startButton.disabled = true;
+        spawnPlayers();
+        setInterval(render, deltaT);
+    }
+
     function spawnPlayers()
     {
+
         let n = numOfPlayers / 3;
 
         for(let i = 0; i < n; i++) {
@@ -88,17 +106,14 @@
                 e.status = "wandering";
             }
 
-            console.log(e.t);
+            //console.log(e.t);
             //console.log(targets);
-            console.log(currentTarget);
-            console.log(e.status);
+            //console.log(currentTarget);
+            //console.log(e.status);
             
             e.draw(ctx);
         });
     }
-
-    
-
 
     function render() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -108,9 +123,9 @@
 
         handleUpdate();
     }
-    spawnPlayers();
-    //render();
-    setInterval(render, deltaT);
+    sliderVal.innerHTML = getSliderVal;
+    startButton.addEventListener("click", startGame);
+    
 
 
 

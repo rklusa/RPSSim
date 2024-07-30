@@ -4,7 +4,13 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <canvas id="mainCanvas" width="800" height ="600" style="border:1px solid #000000;"></canvas>
+        <label>Number of Players</label>
+        <input id="slider" type="range" min="3" max="90" value="30">
+        <label id="sliderVal"></label>
+        <button id ="startButton">Start</button>
+        <div>
+            <canvas id="mainCanvas" width="800" height ="600" style="border:1px solid #000000;"></canvas>
+        </div>
     </body>
 </html>
 <script type="module" src="./main.js"></script>
