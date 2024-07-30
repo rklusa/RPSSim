@@ -1,15 +1,11 @@
 class GameObject {
-    static width = 32;
-    static height = 32;
-    //static img = new Image();
-    //static string = '';
 
     constructor(x, y, t){
         this.x = x;
         this.y = y;
         this.speed = 2;
         this.angle = 0;
-        this.t = t;
+        this.t = t; // entity type
     }
 
     draw(ctx) {
@@ -43,10 +39,6 @@ class GameObject {
         this.avoidBorder();
     }
 
-    //calcDistance(targetX, targetY) {
-        //return Math.sqrt((this.x - targetX) ** 2  + (this.y - targetY) ** 2);
-    //}
-
     avoidBorder() {
         if (this.x < 20 ) {
             this.moveTowards(this.x + 20, this.y);
@@ -60,8 +52,6 @@ class GameObject {
         else if (this.y > 600 - 20) {
             this.moveTowards(this.x, this.y - 20);
         }
-
-
     }
 }
 export {GameObject};
