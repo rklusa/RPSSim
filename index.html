@@ -4,11 +4,14 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <label>Number of Players</label>
-        <input id="slider" type="range" min="3" max="90" value="30">
-        <label id="sliderVal"></label>
-        <button id ="startButton">Start</button>
-        <div>
+        <div class="Controls">
+            <label>Number of Players</label>
+            <input id="slider" type="range" min="3" max="90" value="30">
+            <label id="sliderVal"></label>
+            <button id ="startButton">Start</button>
+        </div>
+        
+        <div class="canvas">
             <canvas id="mainCanvas" width="800" height ="600" style="border:1px solid #000000;"></canvas>
         </div>
     </body>

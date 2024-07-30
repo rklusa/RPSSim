@@ -1,3 +1,11 @@
-canvas {
+canvas {  
+    display: block;
+    margin: 0 auto;
     background: #B2BEB5;
+}
+
+.Controls {
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
